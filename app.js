@@ -78,6 +78,31 @@ if(tilt){
   });
 }
 
+// ===== Copy Zalo phone =====
+const copyBtn = document.getElementById("copyZalo");
+if (copyBtn) {
+  copyBtn.addEventListener("click", async () => {
+    const phone = copyBtn.dataset.phone || "0907657980";
+    try {
+      await navigator.clipboard.writeText(phone);
+      const old = copyBtn.textContent;
+      copyBtn.textContent = "Đã copy: " + phone;
+      setTimeout(() => (copyBtn.textContent = old), 1200);
+    } catch {
+      // fallback
+      const ta = document.createElement("textarea");
+      ta.value = phone;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+      const old = copyBtn.textContent;
+      copyBtn.textContent = "Đã copy: " + phone;
+      setTimeout(() => (copyBtn.textContent = old), 1200);
+    }
+  });
+}
+
 // ===== Particles (Canvas) =====
 const canvas = $("#particles");
 const ctx = canvas.getContext("2d", { alpha: true });
@@ -136,13 +161,13 @@ function step(){
     p.x += p.vx;
     p.y += p.vy;
 
-    // mouse attraction (subtle)
+    // mouse attraction (subtle repel)
     if(mouse.active){
       const dx = mouse.x - p.x;
       const dy = mouse.y - p.y;
       const dist = Math.hypot(dx,dy);
       if(dist < 160){
-        p.x -= dx * 0.002; // repel slightly
+        p.x -= dx * 0.002;
         p.y -= dy * 0.002;
       }
     }
