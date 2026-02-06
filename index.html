@@ -71,7 +71,7 @@
 
           <p class="hero__desc">
             Tải file nhanh gọn, tiết kiệm chi phí. Phù hợp người tải vừa phải – cần “xài là có”.
-            Gia hạn dễ, hỗ trợ khi gặp lỗi đăng nhập/đổi pass.
+            Gia hạn dễ, hỗ trợ khi gặp lỗi đăng nhập/đổi phiên.
           </p>
 
           <div class="hero__actions">
@@ -145,7 +145,7 @@
       <div class="container">
         <div class="section__head reveal">
           <h2>Lợi ích nổi bật</h2>
-          <p>Landing page này đã có sẵn hiệu ứng “xịn” để bạn đăng GitHub Pages.</p>
+          <p>Landing page đã có sẵn hiệu ứng “xịn” để bạn đăng GitHub Pages.</p>
         </div>
 
         <div class="grid-3">
@@ -170,29 +170,12 @@
 
         <div class="marquee glass reveal" data-delay="220">
           <div class="marquee__track">
-            <span>✨ Gradient</span>
-            <span>•</span>
-            <span>🫧 Glassmorphism</span>
-            <span>•</span>
-            <span>🌌 Particles</span>
-            <span>•</span>
-            <span>🌀 Tilt Card</span>
-            <span>•</span>
-            <span>🔦 Glow Button</span>
-            <span>•</span>
-            <span>🎬 Scroll Reveal</span>
-            <span>•</span>
-            <span>✨ Gradient</span>
-            <span>•</span>
-            <span>🫧 Glassmorphism</span>
-            <span>•</span>
-            <span>🌌 Particles</span>
-            <span>•</span>
-            <span>🌀 Tilt Card</span>
-            <span>•</span>
-            <span>🔦 Glow Button</span>
-            <span>•</span>
-            <span>🎬 Scroll Reveal</span>
+            <span>✨ Gradient</span><span>•</span><span>🫧 Glassmorphism</span><span>•</span>
+            <span>🌌 Particles</span><span>•</span><span>🌀 Tilt Card</span><span>•</span>
+            <span>🔦 Glow Button</span><span>•</span><span>🎬 Scroll Reveal</span><span>•</span>
+            <span>✨ Gradient</span><span>•</span><span>🫧 Glassmorphism</span><span>•</span>
+            <span>🌌 Particles</span><span>•</span><span>🌀 Tilt Card</span><span>•</span>
+            <span>🔦 Glow Button</span><span>•</span><span>🎬 Scroll Reveal</span>
           </div>
         </div>
       </div>
@@ -237,7 +220,7 @@
             <div class="glass info">
               <h4>Nhận hàng thế nào?</h4>
               <ol>
-                <li>Nhắn bạn bán (Zalo/Messenger).</li>
+                <li>Nhắn Zalo: <b>0907657980</b></li>
                 <li>Thanh toán.</li>
                 <li>Nhận tài khoản + hướng dẫn.</li>
               </ol>
@@ -283,14 +266,14 @@
           <details class="faq__item glass reveal" data-delay="140">
             <summary>3) Khi không login được thì sao?</summary>
             <div class="faq__content">
-              Nhắn mình, mình xử lý/đổi phiên nhanh. (Bạn sửa phần liên hệ ở dưới cho đúng kênh bán của bạn.)
+              Nhắn Zalo <b>0907657980</b>, mình xử lý/đổi phiên nhanh.
             </div>
           </details>
 
           <details class="faq__item glass reveal" data-delay="210">
             <summary>4) Có hoàn tiền không?</summary>
             <div class="faq__content">
-              Bạn có thể ghi chính sách của bạn ở đây. Ví dụ: hỗ trợ đổi phiên trong X ngày, hoàn tiền khi không cấp được tài khoản.
+              Bạn tự chỉnh chính sách ở đây. Ví dụ: hỗ trợ đổi phiên trong X ngày, hoàn tiền khi không cấp được tài khoản.
             </div>
           </details>
         </div>
@@ -300,16 +283,22 @@
     <!-- Contact / CTA -->
     <section class="section section--cta" id="lien-he">
       <div class="container cta glass reveal">
-        <h2>Sẵn sàng tải file “phê” hơn?</h2>
-        <p>Nhấn nút bên dưới để nhắn mua. Bạn thay link Zalo/Messenger theo của bạn.</p>
+        <h2>Mua ngay – Nhận tài khoản liền</h2>
+        <p>
+          Nhắn Zalo: <b>0907657980</b> để mua. Hoặc bấm nút để mở chat trực tiếp.
+        </p>
 
         <div class="cta__actions">
-          <!-- Thay link của bạn tại đây -->
-          <a class="btn btn--primary" href="https://zalo.me/" target="_blank" rel="noopener">
+          <a class="btn btn--primary" href="https://zalo.me/0907657980" target="_blank" rel="noopener">
             Nhắn Zalo <span class="btn__icon">→</span>
           </a>
-          <a class="btn btn--ghost" href="https://m.me/" target="_blank" rel="noopener">
-            Nhắn Messenger
+
+          <button class="btn btn--ghost" id="copyZalo" type="button" data-phone="0907657980">
+            Copy số Zalo
+          </button>
+
+          <a class="btn btn--soft" href="tel:0907657980">
+            Gọi điện
           </a>
         </div>
 
@@ -329,7 +318,9 @@
           <span class="brand__logo">FS</span>
           <span class="brand__text">Fshare Dùng Chung</span>
         </div>
-        <p class="footer__note">© <span id="year"></span> • Built for GitHub Pages.</p>
+        <p class="footer__note">
+          Zalo: <b>0907657980</b> • © <span id="year"></span> • Built for GitHub Pages.
+        </p>
       </div>
 
       <div class="footer__links">
